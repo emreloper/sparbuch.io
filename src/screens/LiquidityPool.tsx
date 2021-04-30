@@ -99,6 +99,7 @@ const LiquidityPool = () => {
                 href={`https://exchange.pancakeswap.finance/#/add/${pair.token0.address}/${pair.token1.address}`}
                 target="_blank"
                 icon={<FontAwesomeIcon icon="plus" />}
+                // @ts-ignore
                 command={<FontAwesomeIcon icon="external-link-alt" />}
               >
                 Add Liquidity
@@ -108,6 +109,7 @@ const LiquidityPool = () => {
                 href={`https://exchange.pancakeswap.finance/#/remove/${pair.token0.address}/${pair.token1.address}`}
                 target="_blank"
                 icon={<FontAwesomeIcon icon="minus" />}
+                // @ts-ignore
                 command={<FontAwesomeIcon icon="external-link-alt" />}
               >
                 Remove Liquidity
@@ -139,6 +141,7 @@ const LiquidityPool = () => {
                     />
                   </Circle>
                 }
+                // @ts-ignore
                 command={<FontAwesomeIcon icon="external-link-alt" />}
               >
                 PancakeSwap
@@ -152,6 +155,7 @@ const LiquidityPool = () => {
                     <img src={Coinbase} alt="Coinbase" width={24} height={24} />
                   </Circle>
                 }
+                // @ts-ignore
                 command={<FontAwesomeIcon icon="external-link-alt" />}
               >
                 Coinbase - Earn $10 in Bitcoin!
@@ -165,6 +169,7 @@ const LiquidityPool = () => {
                     <img src={Binance} alt="Binance" width={24} height={24} />
                   </Circle>
                 }
+                // @ts-ignore
                 command={<FontAwesomeIcon icon="external-link-alt" />}
               >
                 Binance
@@ -191,6 +196,7 @@ const LiquidityPool = () => {
                     <img src={BlockFi} alt="BlockFi" width={24} height={24} />
                   </Circle>
                 }
+                // @ts-ignore
                 command={<FontAwesomeIcon icon="external-link-alt" />}
               >
                 BlockFi - Earn up to 8.6% APY in crypto
