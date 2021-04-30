@@ -1,0 +1,35 @@
+{
+  "name": "sparbuch",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^1.6.0",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.3.0",
+    "@ethersproject/bignumber": "^5.1.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "framer-motion": "^4.1.9",
+    "history": "^5.0.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-hook-form": "^7.3.0",
+    "react-router-dom": "^6.0.0-beta.0",
+    "recoil": "^0.2.0",
+    "web3": "^1.3.5"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@vitejs/plugin-react-refresh": "^1.3.1",
+    "typescript": "^4.1.2",
+    "vite": "^2.1.5"
+  }
+}
