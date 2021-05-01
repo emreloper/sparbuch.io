@@ -26,9 +26,9 @@ export const AppShell: React.FC = ({ children }) => {
             fontSize="xl"
             fontWeight="bold"
           >
-            Sparbuch.io
+            🧾 Sparbuch.io
           </Text>
-          <Spacer maxW={4} />
+          <Spacer maxW={12} />
           <Stack>
             <Link href="#">🚜 Farms (soon...)</Link>
           </Stack>
