@@ -1,8 +1,6 @@
 import {
   Alert,
   AlertDescription,
-  AlertIcon,
-  AlertTitle,
   Button,
   CloseButton,
   FormControl,
@@ -12,14 +10,14 @@ import {
   useDisclosure,
   VStack,
 } from '@chakra-ui/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
-import { createContract, createWeb3 } from '../common/web3';
 import ABI_PancakeFactory from '../abis/PancakeFactory.json';
+import { createContract, createWeb3 } from '../common/web3';
 import { TRACKED_TOKENS } from '../state/price';
 import { TokenSelect } from './TokenSelect';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 interface PairSearchFormData {
   token0: string;
@@ -79,7 +77,7 @@ export const PairSearch = () => {
         </Alert>
       )}
       <VStack as="form" onSubmit={onSubmit}>
-        <Heading alignSelf="flex-start" size="lg" mb={4}>
+        <Heading alignSelf="flex-start" size="lg" fontWeight="semibold" mb={4}>
           Find a 🥞 pair (v2)
         </Heading>
         <FormControl>

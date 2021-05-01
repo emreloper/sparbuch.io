@@ -3,7 +3,7 @@ import React from 'react';
 import { Token } from '../state/pair';
 
 interface PairAvatarProps extends Omit<AvatarGroupProps, 'children'> {
-  tokens: Token[];
+  tokens: Pick<Token, 'address' | 'symbol'>[];
 }
 
 export const PairAvatar = ({ tokens, ...props }: PairAvatarProps) => {

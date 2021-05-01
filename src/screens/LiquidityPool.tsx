@@ -15,12 +15,14 @@ import {
   MenuList,
   Portal,
   SimpleGrid,
+  Spacer,
   Text,
   VStack,
 } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useParams } from 'react-router';
+import { Link as RouterLink } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
 import { AddToMetamaskButton } from '../components/AddToMetamaskButton';
 import { AppShell } from '../components/AppShell';
@@ -42,7 +44,7 @@ const LiquidityPool = () => {
     <AppShell>
       <Breadcrumb mt={4}>
         <BreadcrumbItem>
-          <BreadcrumbLink as={Link} to="/">
+          <BreadcrumbLink as={RouterLink} to="/">
             Home
           </BreadcrumbLink>
         </BreadcrumbItem>
@@ -206,69 +208,69 @@ const LiquidityPool = () => {
         </Menu>
       </ButtonGroup>
       <SimpleGrid columns={[1, 3]} gap={4} mt={6}>
-        <VStack
-          spacing={0}
-          alignItems="flex-start"
-          p={4}
-          bg="white"
-          shadow="base"
-        >
-          <Text as="div" fontSize="xl" fontWeight="semibold">
-            LP Price
-          </Text>
-          <HStack alignItems="baseline" spacing={1}>
-            <Text as="div" fontSize="lg">
-              {localization.currencyFormat.format(
-                pair.price_busd.toUnsafeFloat()
-              )}
-            </Text>
-            <Text as="div" fontSize="xs">
-              BUSD
-            </Text>
+        <Box p={4} bg="white" shadow="base">
+          <HStack>
+            <VStack spacing={0} alignItems="flex-start">
+              <Text as="div" fontSize="xl" fontWeight="semibold">
+                LP Price
+              </Text>
+              <HStack alignItems="baseline" spacing={1}>
+                <Text as="div" fontSize="lg">
+                  {localization.currencyFormat.format(
+                    pair.price_busd.toUnsafeFloat()
+                  )}
+                </Text>
+                <Text as="div" fontSize="xs">
+                  BUSD
+                </Text>
+              </HStack>
+            </VStack>
+            <Spacer />
+            <Text fontSize="2xl">💵</Text>
           </HStack>
-        </VStack>
-        <VStack
-          spacing={0}
-          alignItems="flex-start"
-          p={4}
-          bg="white"
-          shadow="base"
-        >
-          <Text as="div" fontSize="xl" fontWeight="semibold">
-            Total Liquidity
-          </Text>
-          <HStack alignItems="baseline" spacing={1}>
-            <Text as="div" fontSize="lg">
-              {localization.currencyFormat.format(
-                pair.totalLiquidity_busd.toUnsafeFloat()
-              )}
-            </Text>
-            <Text as="div" fontSize="xs">
-              BUSD
-            </Text>
+        </Box>
+        <Box p={4} bg="white" shadow="base">
+          <HStack>
+            <VStack spacing={0} alignItems="flex-start">
+              <Text as="div" fontSize="xl" fontWeight="semibold">
+                Total Liquidity
+              </Text>
+              <HStack alignItems="baseline" spacing={1}>
+                <Text as="div" fontSize="lg">
+                  {localization.currencyFormat.format(
+                    pair.totalLiquidity_busd.toUnsafeFloat()
+                  )}
+                </Text>
+                <Text as="div" fontSize="xs">
+                  BUSD
+                </Text>
+              </HStack>
+            </VStack>
+            <Spacer />
+            <Text fontSize="2xl">💰</Text>
           </HStack>
-        </VStack>
-        <VStack
-          spacing={0}
-          alignItems="flex-start"
-          p={4}
-          bg="white"
-          shadow="base"
-        >
-          <Text as="div" fontSize="xl" fontWeight="semibold">
-            Total Supply
-          </Text>
-          <HStack alignItems="baseline" spacing={1}>
-            <Text as="div" fontSize="lg">
-              {localization.currencyFormat.format(
-                pair.totalSupply.toUnsafeFloat()
-              )}
-            </Text>
-            <Text as="div" fontSize="xs">
-              LP
-            </Text>
+        </Box>
+        <Box p={4} bg="white" shadow="base">
+          <HStack>
+            <VStack spacing={0} alignItems="flex-start">
+              <Text as="div" fontSize="xl" fontWeight="semibold">
+                Total Supply
+              </Text>
+              <HStack alignItems="baseline" spacing={1}>
+                <Text as="div" fontSize="lg">
+                  {localization.currencyFormat.format(
+                    pair.totalSupply.toUnsafeFloat()
+                  )}
+                </Text>
+                <Text as="div" fontSize="xs">
+                  LP
+                </Text>
+              </HStack>
+            </VStack>
+            <Spacer />
+            <Text fontSize="2xl">🏧</Text>
           </HStack>
-        </VStack>
+        </Box>
       </SimpleGrid>
       <SimpleGrid columns={[1, 2]} spacing={4} my={6}>
         <TokenDetail pair={pair} tokenKey="token0" />

@@ -27,6 +27,10 @@ const TOKENS = [
     symbol: 'ETH',
   },
   {
+    address: TRACKED_TOKENS.CAKE,
+    symbol: 'Cake',
+  },
+  {
     address: TRACKED_TOKENS.BUSD,
     symbol: 'BUSD',
   },

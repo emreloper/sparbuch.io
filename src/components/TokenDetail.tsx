@@ -1,4 +1,5 @@
 import {
+  Avatar,
   Box,
   GridItem,
   HStack,
@@ -31,9 +32,16 @@ export const TokenDetail = ({ pair, tokenKey }: TokenDetailProps) => {
     <Box p={4} bg="white" shadow="base">
       <SimpleGrid columns={3} gap={2}>
         <GridItem colSpan={3}>
-          <Text as="div" fontSize="lg" fontWeight="semibold">
-            {token.symbol}
-          </Text>
+          <HStack>
+            <Avatar
+              size="sm"
+              name={token.symbol}
+              src={`https://exchange.pancakeswap.finance/images/coins/${token.address}.png`}
+            />
+            <Text as="div" fontSize="lg" fontWeight="semibold">
+              {token.symbol}
+            </Text>
+          </HStack>
         </GridItem>
         <GridItem>
           <Text as="div" fontWeight="semibold">

@@ -16,10 +16,16 @@ import { Link as RouterLink } from 'react-router-dom';
 
 export const AppShell: React.FC = ({ children }) => {
   return (
-    <Flex flexDirection="column" height="100vh">
+    <Flex flexDirection="column" minH="100vh">
       <Box bg="white" shadow="base">
         <Container display="flex" alignItems="center" maxW="7xl" height={12}>
-          <Text as={RouterLink} to="/" fontSize="xl" fontWeight="semibold">
+          <Text
+            as={RouterLink}
+            to="/"
+            color="purple.700"
+            fontSize="xl"
+            fontWeight="bold"
+          >
             Sparbuch.io
           </Text>
           <Spacer maxW={4} />
