@@ -53,6 +53,9 @@ export const PairSearch = () => {
         .getPair(data.token0, data.token1)
         .call();
 
+      if (address === '0x0000000000000000000000000000000000000000')
+        throw new Error('Pair not found.');
+
       navigate(`/lp/${address}/`);
     } catch (e) {
       stopLoading();
