@@ -6,9 +6,7 @@ import {
   Link,
   SimpleGrid,
   Text,
-  VStack,
 } from '@chakra-ui/react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useLocalization } from '../context/localization-context';
 import { Pair } from '../state/pair';
