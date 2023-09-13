@@ -43,7 +43,7 @@ export const AppShell: React.FC = ({ children }) => {
             <HStack>
               <IconButton
                 as={Link}
-                href="https://twitter.com/emreloper"
+                href="https://twitter.com/emreloperr"
                 target="_blank"
                 icon={<FontAwesomeIcon icon={['fab', 'twitter']} />}
                 aria-label="Twitter"
